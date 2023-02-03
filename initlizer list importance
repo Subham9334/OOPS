@@ -1,0 +1,57 @@
+// using constructor
+
+
+#include<iostream>
+using namespace std;
+
+class One{
+    public:
+    One(){
+        cout<<"default constructor"<<endl;
+    }
+    One(int x){
+        cout<<"parameterized constructor"<<endl;
+    }
+};
+
+class Main{
+    One a;
+    public:
+    Main(){
+        a = One(4);
+    }
+};
+
+int main()
+{
+    Main m;
+    return 0;
+}
+
+// using intilizer list
+
+#include<iostream>
+using namespace std;
+class one{
+    public:
+    one(){
+        cout<<"default constructor";
+    }
+    one(int x){
+        cout<<"parameterized constructor";
+    }
+};
+class Main{
+    
+    one a;
+    public:
+    Main():a(4)
+    {
+       
+    }
+};
+int main()
+{
+    Main m;
+    return 0;
+}
