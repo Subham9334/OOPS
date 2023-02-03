@@ -1,0 +1,73 @@
+// problems faced in default copy or shallow copy 
+#include <iostream>
+using namespace std;
+class test{
+    int *ptr;
+    public:
+    
+    test(int x){
+     ptr=new int(x);
+    }
+    void set(int x){
+        *ptr=x;
+    }
+    void print(){
+        cout<<*ptr<<endl;
+    }
+};
+
+int main() {
+    test t1(10);
+    test t2(t1);
+    t2.set(20);
+    t1.print();
+    t2.print();
+    return 0;
+   
+   
+
+    return 0;
+}
+//main problem is when we use dynamic memory it copy another object
+
+
+******************
+
+//DEEP CoPy We have to write our own copy constructor . we copy the dereference from one pointer variable to another.
+
+
+#include <iostream>
+using namespace std;
+class test{
+    int *ptr;
+    public:
+    
+    test(int x){
+     ptr=new int(x);
+    }
+    test(const test &t)
+    {
+        int var=*t.ptr;
+        ptr=new int(var);
+        
+    }
+    void set(int x){
+        *ptr=x;
+    }
+    void print(){
+        cout<<*ptr<<endl;
+    }
+};
+
+int main() {
+    test t1(10);
+    test t2(t1);
+    t2.set(20);
+    t1.print();
+    t2.print();
+    return 0;
+   
+   
+
+    return 0;
+}
