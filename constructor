@@ -1,0 +1,75 @@
+// creating constructor in normal and dynamically using pointer
+
+#include <iostream>
+using namespace std;
+class  student{
+   int clas;
+   int roll;
+   public: 
+      student()
+      {
+          clas=3;
+          roll=67;
+      }
+      student(int x,int y)
+      {
+          clas=x;
+          roll=y;
+      }
+      void info(){
+          cout<<clas<<"and"<<roll<<endl;
+      }
+};
+
+int main() {
+  student s1,s2(5,49);
+  s1.info();
+  cout<<"and 2nd student info is: "<<endl;
+  s2.info();
+//   creating a dynamically object
+  student *s3=new student(4,11);
+  s3->info();
+  
+    // Write C++ code here
+   
+
+    return 0;
+}
+
+
+
+
+// using initilizer list
+#include <iostream>
+using namespace std;
+class  student{
+   int clas;
+   int roll;
+   public: 
+      student():clas(3),roll(67)
+      {
+          
+      }
+      student(int x,int y):clas(x),roll(y)
+      {
+        
+      }
+      void info(){
+          cout<<clas<<"and"<<roll<<endl;
+      }
+};
+
+int main() {
+  student s1,s2(5,49);
+  s1.info();
+  cout<<"and 2nd student info is: "<<endl;
+  s2.info();
+//   creating a dynamically object
+  student *s3=new student(4,11);
+  s3->info();
+  
+    // Write C++ code here
+   
+
+    return 0;
+}
