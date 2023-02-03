@@ -1,0 +1,32 @@
+// inheritence
+#include <iostream>
+using namespace std;
+class student{
+    protected :
+    string name;
+    int age;
+};
+class stu:public student{
+    int clas;
+    int roll;
+    public:
+    stu(){
+        name="subham";
+        age=21;
+        clas=11;
+        roll=49;
+    }
+    void info(){
+        cout<<name<<" "<<clas<<" "<<age<<" "<<roll;
+    }
+    
+    
+};
+int main(){
+    stu s1;
+    s1.info();
+    return 0;
+}
+//int public inheritence all protective became protective public became public
+//protective inheritence all public became protective
+
