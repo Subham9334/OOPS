@@ -1,0 +1,32 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class base{
+    public:
+    int x;
+    base(int x):x(x){
+        
+    }
+    
+    
+};
+class derived:public base{
+    int y;
+    public:
+    derived(int x,int y):y(y),base(x){
+        
+    }
+    void info(){
+        cout<<x<<" "<<y;
+    }
+    
+    
+};
+int main() {
+    // Write C++ code here
+    derived d(10,20);
+    d.info();
+    cout<<d.x;
+
+    return 0;
+}
